@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.nav,
+.cart-nav {
+  width: 100%;
+  top: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  -webkit-box-shadow: 0px 6px 31px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 31px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 31px -8px rgba(0, 0, 0, 0.75);
+}
+
+.logo-img {
+  max-width: 15vw;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+}
+
+.icon:hover {
+  color: green;
+}
+
+.container {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.brands {
+  width: 20%;
+}
+.catalog {
+  width: 80%;
+}
+
+.catalog h1 {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.brands-list {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.brands-par {
+  text-align: left;
+  cursor: pointer;
+}
+
+.brand {
+  list-style: none;
+  text-align: left;
+  cursor: pointer;
+}
+.brand:hover,
+.brands-par:hover {
+  color: darkgray;
+  transition: 0.3s;
+}
+
+.item {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.5rem;
+  width: 25%;
+  height: fit-content;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 1.5em;
+}
+
+.item-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-title {
+  font-size: 0.9rem;
+}
+
+.item-brand,
+.item-price {
+  font-size: 0.7rem;
+}
+
+.item-price {
+  display: flex;
+  align-items: center;
+}
+
+.item-currency {
+  margin-right: 0.2em;
+}
+
+.add-btn {
+  border: none;
+  padding: 0.1em 0.3em;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  margin-left: 0.2em;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  transform: scale(1.2);
+}
+
+.added {
+  background: green;
+  color: white;
+}
+
+.cartLink {
+  text-decoration: none;
+}
+.items-qwt {
+  font-size: 0.7rem;
+  position: absolute;
+  color: darkgreen;
+}
+
+.catalog-link {
+  text-decoration: none;
+  color: black;
+}
+.catalog-link:hover {
+  color: darkgray;
+}
+
+.cart-main-text {
+  margin: 1em;
+  font-weight: 400;
+}
+
+.cart-descr {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.item-descr {
+  margin-left: 1em;
+  width: 30%;
+}
+
+.total-descr {
+  margin-right: 6em;
+}
+
+.cart-qwt {
+  position: absolute;
+  top: 1em;
+  right: 0.6em;
+  font-size: 0.8rem;
+  color: green;
+}
+
+.cart-item {
+  margin-top: 0.5em;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+.cart-qwt-control {
+  display: flex;
+  align-items: center;
+}
+
+.qwt-btns {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.3em;
+}
+
+.increment-btn,
+.decrement-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  height: 1em;
+}
+
+.increment-btn:hover,
+.decrement-btn:hover {
+  transform: scale(1.1);
+}
+
+.cart-item-quality-description {
+  display: flex;
+  width: 30%;
+  /* border: 1px solid red; */
+}
+
+.cart-item-description {
+  /* border: 1px solid red; */
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.cart-item-commercial-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 46%;
+  margin-right: 2.5em;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  margin-right: 0.5em;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.delete-btn:hover {
+  color: darkred;
+}
+
+/* footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: darkgray;
+  height: 80px;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+} */
