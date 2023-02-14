@@ -1,6 +1,7 @@
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import pic1 from "./assets/1.png";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import pic1 from "./assets/1.jpeg";
 import React, { useState } from "react";
 
 export default function ItemCart(props) {
@@ -24,13 +25,13 @@ export default function ItemCart(props) {
           {props.currency} {props.price}
         </p>
         <div className="cart-qwt-control">
-          <p className="cart-item-qwt">{count}</p>
           <div className="qwt-btns">
-            <button onClick={increment} className="increment-btn">
-              <IoMdArrowDropup />
-            </button>
             <button onClick={decrement} className="decrement-btn">
-              <IoMdArrowDropdown />
+              <AiOutlineMinus />
+            </button>
+            <p className="cart-item-qwt">{count}</p>
+            <button onClick={increment} className="increment-btn">
+              <AiOutlinePlus />
             </button>
           </div>
         </div>

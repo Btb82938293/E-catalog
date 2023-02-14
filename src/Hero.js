@@ -2,7 +2,7 @@ import brands from "./brands";
 import products from "./products";
 import React, { useEffect, useState } from "react";
 import { BsCart, BsCartCheck } from "react-icons/bs";
-import pic1 from "./assets/1.png";
+import pic1 from "./assets/1.jpeg";
 
 export default function Hero() {
   //Modifying data, adding isAdded method
@@ -74,10 +74,11 @@ export default function Hero() {
   return (
     <div className="hero">
       <div className="container">
-        <span className="cart-qwt">
-          {prodData.filter((elem) => elem.isAdded).length > 0 &&
-            prodData.filter((elem) => elem.isAdded).length}
-        </span>
+        {prodData.filter((elem) => elem.isAdded).length > 0 && (
+          <span className="cart-qwt">
+            {prodData.filter((elem) => elem.isAdded).length}
+          </span>
+        )}
         <div className="brands">
           <p onClick={showAll} className="brands-par">
             All brands
@@ -85,7 +86,6 @@ export default function Hero() {
           <ul className="brands-list">{brandEls}</ul>
         </div>
         <div className="catalog">
-          <h1>Catalog</h1>
           <div className="item-cont">{itemEls}</div>
         </div>
       </div>

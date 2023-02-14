@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "./assets/logo.png";
 import React, { useEffect, useState } from "react";
 import ItemCart from "./ItemCart";
 
@@ -7,6 +6,7 @@ export default function Cart() {
   const [savedData, setSavedData] = useState(
     JSON.parse(localStorage.getItem("prodData"))
   );
+  console.log(savedData);
   //Logic for deleting items from the cart
   const deleteItem = (id) => {
     console.log("deleted", id);
@@ -34,22 +34,17 @@ export default function Cart() {
     <div className="cart">
       <div className="cart-nav">
         <Link className="cartLink" to="/">
-          <img className="logo-img" src={logo} alt="/" />
+          <p className="logo-img">YourLogo</p>
         </Link>
         <Link className="catalog-link" to="/">
           Catalog
         </Link>
       </div>
-      <main>
-        <h3 className="cart-main-text">Shopping Cart</h3>
-        <div className="cart-descr">
-          <p className="item-descr">Item</p>
-          <p>Price</p>
-          <p className="qwt-descr">Qty</p>
-          <p className="total-descr">Total</p>
-        </div>
-        {addedEls}
-      </main>
+      {savedData.length > 0 ? (
+        <main>{addedEls}</main>
+      ) : (
+        <div className="cart-empty">Your shopping cart is empty</div>
+      )}
     </div>
   );
 }
